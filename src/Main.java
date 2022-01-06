@@ -9,13 +9,23 @@ public class Main {
         // write your code here
         Scanner sc = new Scanner(System.in);
 
-        int[][] arr = {
-                {1, 2, 3, 4, 5},
-                {2, 4, 6, 8, 10},
-                {2, 4, 2, 4, 2},
-                {1, 2, 1, 1, 2},
-                {4, 5, 1, 2, 6}
-        };
+//        int[][] arr = {
+//                {1, 2, 3, 4, 5},
+//                {2, 4, 6, 8, 10},
+//                {2, 4, 2, 4, 2},
+//                {1, 2, 1, 1, 2},
+//                {4, 5, 1, 2, 6}
+//        };
+
+        System.out.print("Nhập kích thước của ma trận: ");
+        int size = sc.nextInt();
+        int [][] arr = new int[size][size];
+        for (int i = 0; i < arr.length; i++){
+            for (int j = 0; j < arr[0].length; j++){
+                System.out.printf("Nhập phần tử tại hàng %d, cột %d: ", i, j);
+                arr[i][j] = sc.nextInt();
+            }
+        }
 
         System.out.println("Ma trận: ");
         for (int[] row : arr) {
